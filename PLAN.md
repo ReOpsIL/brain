@@ -19,6 +19,7 @@ The rest of this file is the spec they were built from; keep it in step with the
 | `Resources/web/fonts/` | Fraunces (variable) and Atkinson Hyperlegible 400/700, latin woff2, both OFL |
 | `Sources/BrainSpark/` | Menu bar shell: `main.swift`, `AppDelegate.swift` (status item, bridge, saved state), `GamePanel.swift` |
 | `scripts/build_app.sh`, `scripts/make_icon.swift` | Builds `build/Brain Spark.app`; `--install` copies it to /Applications and opens it |
+| `scripts/make_dmg.sh` | Builds the app and packages it as `build/BrainSpark-<version>.dmg` |
 | `tools/test_puzzles.js` | Generates and checks every level of every game under Node |
 | `tools/build_words.js` | Regenerates `words.js` (`npm install wordlist-english && node tools/build_words.js`) |
 

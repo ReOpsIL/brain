@@ -20,6 +20,15 @@ scripts/build_app.sh --install
 This builds `build/Brain Spark.app`, copies it to `/Applications` and opens it. Leave off `--install` to only build.
 Left-click the menu bar icon to open or close the game; right-click it for Today's Five, Open at Login and Quit.
 
+To package the app as a disk image for sharing:
+
+```bash
+scripts/make_dmg.sh
+```
+
+This writes `build/BrainSpark-<version>.dmg`. The app is ad-hoc signed and not notarized, so on another Mac the
+first launch has to be allowed in System Settings > Privacy & Security ("Open Anyway").
+
 Progress is saved in `~/Library/Application Support/BrainSpark/state.json`.
 
 ## Play in a browser
@@ -48,7 +57,7 @@ for example `node tools/test_puzzles.js sudoku pipes`.
 | --- | --- |
 | `Resources/web/` | The game: `index.html`, `css/app.css`, `js/engine.js`, `js/games/*.js`, `js/app.js`, fonts |
 | `Sources/BrainSpark/` | The Swift menu bar shell (status item, panel, web view, saved state) |
-| `scripts/` | `build_app.sh` and the icon generator |
+| `scripts/` | `build_app.sh`, `make_dmg.sh` and the icon generator |
 | `tools/` | Puzzle tests and the word-list generator |
 | `PLAN.md` | The full spec: architecture, puzzle rules, design direction |
 
